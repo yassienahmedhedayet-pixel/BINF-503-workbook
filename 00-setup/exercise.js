@@ -12,6 +12,6 @@ export function getStudent() {
   return {
     name: "Yassin ahmed hedayet",
     studentId: "16001354",
-    githubUsername: "yassienahmedhedayet-pixel",
+    githubUsername: "yassienahmedhedayet",
   };
 }
