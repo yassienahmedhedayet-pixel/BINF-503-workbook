@@ -1,12 +1,14 @@
-// 01-basics — your work goes in this file.
-//
-// The lesson is in example.js:  node 01-basics/example.js
-// Check your work with:         npm test 01
-//
-// Fill in the BODIES only — each function's declaration line is written for
-// you. Delete the `// TODO` and the `throw` line, and answer in their place.
-//
-// RETURN the value. A console.log is not a return.
+
+
+ // 01-basics — your work goes in this file.
+ //
+ // The lesson is in example.js:  node 01-basics/example.js
+ // Check your work with:         npm test 01
+ //
+ // Fill in the BODIES only — each function's declaration line is written for
+ // you. Delete the `// TODO` and the `throw` line, and answer in their place.
+ //
+ // RETURN the value. A console.log is not a return.
 
 /**
  * Says what type a value is.
@@ -17,8 +19,7 @@
  * @returns {string}
  */
 export function describeValue(value) {
-  // TODO: use typeof inside a template literal.
-  throw new Error("describeValue is not written yet");
+  return `${value} is a ${typeof value}`;
 }
 
 /**
@@ -30,8 +31,7 @@ export function describeValue(value) {
  * @returns {string}
  */
 export function priceLabel(product, amount) {
-  // TODO: two values in one template literal.
-  throw new Error("priceLabel is not written yet");
+  return `${product} costs ${amount} EGP`;
 }
 
 /**
@@ -44,8 +44,7 @@ export function priceLabel(product, amount) {
  * @returns {boolean}
  */
 export function isExpensive(amount) {
-  // TODO: return the comparison itself. You do not need an if statement.
-  throw new Error("isExpensive is not written yet");
+  return amount > 100;
 }
 
 /**
@@ -58,8 +57,11 @@ export function isExpensive(amount) {
  * @returns {number} the shipping cost in EGP
  */
 export function shippingCost(orderTotal) {
-  // TODO: use an if. Remember that return stops the function.
-  throw new Error("shippingCost is not written yet");
+  if (orderTotal > 500) {
+    return 0;
+  } else {
+    return 50;
+  }
 }
 
 /**
@@ -72,6 +74,12 @@ export function shippingCost(orderTotal) {
  * @returns {string}
  */
 export function stockLabel(count) {
-  // TODO: use if / else if / else. The order of the branches matters.
-  throw new Error("stockLabel is not written yet");
+  if (count === 0) {
+    return "Out of stock";
+  } else if (count < 10) {
+    return "Low stock";
+  } else {
+    return "In stock";
+  }
 }
+
